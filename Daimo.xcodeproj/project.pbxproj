@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E6452CD2F706B95153377A7 /* Pods_Daimo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */; };
+		BF7C133322D9CCAE00EBB84E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */; };
+		BF7C133822D9CCAE00EBB84E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7C133622D9CCAE00EBB84E /* Main.storyboard */; };
+		BF7C133B22D9CCAE00EBB84E /* Daimo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF7C133922D9CCAE00EBB84E /* Daimo.xcdatamodeld */; };
+		BF7C133D22D9CCAF00EBB84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7C133C22D9CCAF00EBB84E /* Assets.xcassets */; };
+		BF7C134022D9CCAF00EBB84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7C133E22D9CCAF00EBB84E /* LaunchScreen.storyboard */; };
+		BF7C135A22DA2CF800EBB84E /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C135922DA2CF800EBB84E /* TodoTableViewController.swift */; };
+		BF7C136822DB19F700EBB84E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136722DB19F700EBB84E /* HeaderView.swift */; };
+		BF7C136A22DB1C3500EBB84E /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136922DB1C3500EBB84E /* DateCollectionViewCell.swift */; };
+		BF7C136C22DB1F3E00EBB84E /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136B22DB1F3E00EBB84E /* TodoTableViewCell.swift */; };
+		BF7C136E22DBA1C500EBB84E /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136D22DBA1C500EBB84E /* Singleton.swift */; };
+		BF7C137022DC4CBC00EBB84E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136F22DC4CBC00EBB84E /* TodoList.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63D0CFA3DEB903AC40184F12 /* Pods-Daimo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daimo.release.xcconfig"; path = "Target Support Files/Pods-Daimo/Pods-Daimo.release.xcconfig"; sourceTree = "<group>"; };
+		AF5FC093E89E442E2DF241B1 /* Pods-Daimo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daimo.debug.xcconfig"; path = "Target Support Files/Pods-Daimo/Pods-Daimo.debug.xcconfig"; sourceTree = "<group>"; };
+		BF7C132F22D9CCAE00EBB84E /* Daimo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daimo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF7C133722D9CCAE00EBB84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF7C133A22D9CCAE00EBB84E /* Daimo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daimo.xcdatamodel; sourceTree = "<group>"; };
+		BF7C133C22D9CCAF00EBB84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF7C133F22D9CCAF00EBB84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF7C134122D9CCAF00EBB84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7C135922DA2CF800EBB84E /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		BF7C136722DB19F700EBB84E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BF7C136922DB1C3500EBB84E /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF7C136B22DB1F3E00EBB84E /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		BF7C136D22DBA1C500EBB84E /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		BF7C136F22DC4CBC00EBB84E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daimo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF7C132C22D9CCAE00EBB84E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E6452CD2F706B95153377A7 /* Pods_Daimo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE9120D9E0E9C86F9E6969BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF5FC093E89E442E2DF241B1 /* Pods-Daimo.debug.xcconfig */,
+				63D0CFA3DEB903AC40184F12 /* Pods-Daimo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF7C132622D9CCAE00EBB84E = {
+			isa = PBXGroup;
+			children = (
+				BF7C133122D9CCAE00EBB84E /* Daimo */,
+				BF7C133022D9CCAE00EBB84E /* Products */,
+				BE9120D9E0E9C86F9E6969BE /* Pods */,
+				CEABC570D98CE93426A17E48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF7C133022D9CCAE00EBB84E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF7C132F22D9CCAE00EBB84E /* Daimo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF7C133122D9CCAE00EBB84E /* Daimo */ = {
+			isa = PBXGroup;
+			children = (
+				BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */,
+				BF7C134922D9CFAF00EBB84E /* Model */,
+				BF7C134822D9CFA400EBB84E /* View */,
+				BF7C134722D9CF9B00EBB84E /* Controller */,
+				BF7C133622D9CCAE00EBB84E /* Main.storyboard */,
+				BF7C133C22D9CCAF00EBB84E /* Assets.xcassets */,
+				BF7C133E22D9CCAF00EBB84E /* LaunchScreen.storyboard */,
+				BF7C134122D9CCAF00EBB84E /* Info.plist */,
+				BF7C133922D9CCAE00EBB84E /* Daimo.xcdatamodeld */,
+			);
+			path = Daimo;
+			sourceTree = "<group>";
+		};
+		BF7C134722D9CF9B00EBB84E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF7C135922DA2CF800EBB84E /* TodoTableViewController.swift */,
+				BF7C136722DB19F700EBB84E /* HeaderView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF7C134822D9CFA400EBB84E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF7C136922DB1C3500EBB84E /* DateCollectionViewCell.swift */,
+				BF7C136B22DB1F3E00EBB84E /* TodoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF7C134922D9CFAF00EBB84E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF7C136D22DBA1C500EBB84E /* Singleton.swift */,
+				BF7C136F22DC4CBC00EBB84E /* TodoList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEABC570D98CE93426A17E48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF7C132E22D9CCAE00EBB84E /* Daimo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7C134422D9CCAF00EBB84E /* Build configuration list for PBXNativeTarget "Daimo" */;
+			buildPhases = (
+				3F7CE017350B8CA3EC3790F2 /* [CP] Check Pods Manifest.lock */,
+				BF7C132B22D9CCAE00EBB84E /* Sources */,
+				BF7C132C22D9CCAE00EBB84E /* Frameworks */,
+				BF7C132D22D9CCAE00EBB84E /* Resources */,
+				90FCC1A070384DF45CA8D854 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Daimo;
+			productName = Daimo;
+			productReference = BF7C132F22D9CCAE00EBB84E /* Daimo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF7C132722D9CCAE00EBB84E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = sogih;
+				TargetAttributes = {
+					BF7C132E22D9CCAE00EBB84E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = BF7C132A22D9CCAE00EBB84E /* Build configuration list for PBXProject "Daimo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF7C132622D9CCAE00EBB84E;
+			productRefGroup = BF7C133022D9CCAE00EBB84E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF7C132E22D9CCAE00EBB84E /* Daimo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF7C132D22D9CCAE00EBB84E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7C134022D9CCAF00EBB84E /* LaunchScreen.storyboard in Resources */,
+				BF7C133D22D9CCAF00EBB84E /* Assets.xcassets in Resources */,
+				BF7C133822D9CCAE00EBB84E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F7CE017350B8CA3EC3790F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daimo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90FCC1A070384DF45CA8D854 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daimo/Pods-Daimo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daimo/Pods-Daimo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Daimo/Pods-Daimo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF7C132B22D9CCAE00EBB84E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7C133322D9CCAE00EBB84E /* AppDelegate.swift in Sources */,
+				BF7C136E22DBA1C500EBB84E /* Singleton.swift in Sources */,
+				BF7C135A22DA2CF800EBB84E /* TodoTableViewController.swift in Sources */,
+				BF7C137022DC4CBC00EBB84E /* TodoList.swift in Sources */,
+				BF7C133B22D9CCAE00EBB84E /* Daimo.xcdatamodeld in Sources */,
+				BF7C136C22DB1F3E00EBB84E /* TodoTableViewCell.swift in Sources */,
+				BF7C136822DB19F700EBB84E /* HeaderView.swift in Sources */,
+				BF7C136A22DB1C3500EBB84E /* DateCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF7C133622D9CCAE00EBB84E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7C133722D9CCAE00EBB84E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF7C133E22D9CCAF00EBB84E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7C133F22D9CCAF00EBB84E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF7C134222D9CCAF00EBB84E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF7C134322D9CCAF00EBB84E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF7C134522D9CCAF00EBB84E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5FC093E89E442E2DF241B1 /* Pods-Daimo.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				INFOPLIST_FILE = Daimo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogih.Daimo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BF7C134622D9CCAF00EBB84E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D0CFA3DEB903AC40184F12 /* Pods-Daimo.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YL8LS5ZJC;
+				INFOPLIST_FILE = Daimo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sogih.Daimo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF7C132A22D9CCAE00EBB84E /* Build configuration list for PBXProject "Daimo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7C134222D9CCAF00EBB84E /* Debug */,
+				BF7C134322D9CCAF00EBB84E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7C134422D9CCAF00EBB84E /* Build configuration list for PBXNativeTarget "Daimo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7C134522D9CCAF00EBB84E /* Debug */,
+				BF7C134622D9CCAF00EBB84E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF7C133922D9CCAE00EBB84E /* Daimo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF7C133A22D9CCAE00EBB84E /* Daimo.xcdatamodel */,
+			);
+			currentVersion = BF7C133A22D9CCAE00EBB84E /* Daimo.xcdatamodel */;
+			path = Daimo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BF7C132722D9CCAE00EBB84E /* Project object */;
+}
