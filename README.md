@@ -1,1 +1,2 @@
 # Daimo
+![](simulation.gif)
