@@ -16,6 +16,8 @@ import CoreData
 
 class TodoTableViewController: UITableViewController {
     
+    let refresh = UIRefreshControl()
+    
     // MARK:- Properties
     fileprivate let cellId = "cell"
     fileprivate let headerId = "header"
@@ -31,7 +33,7 @@ class TodoTableViewController: UITableViewController {
             transition.type = CATransitionType.fade
             transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
             transition.fillMode = CAMediaTimingFillMode.forwards
-            transition.duration = 0.4
+            transition.duration = 0.25
             transition.subtype = CATransitionSubtype.fromLeft
             tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
         }
@@ -48,38 +50,54 @@ class TodoTableViewController: UITableViewController {
     
     let todayDate = Singleton.shared.todayDate
     let startDate = Singleton.shared.startDate
-
+    
     
     // MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         setCurrentDateToToday()
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
+        
         
         retrieveData()
-        
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.sectionHeaderHeight = 164-26
         tableView.sectionFooterHeight = 0
         tableView.register(TodoTableViewCell.self, forCellReuseIdentifier: cellId)
-        navigationItem.title = "Daimo"
+        navigationItem.title = "DAIMO"
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.greyishBrown,
+            NSAttributedString.Key.font: UIFont.naviTitle
+        ]
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .white
+        view.backgroundColor = .white
+        //네비바 경계선
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.backgroundColor = .clear
+        
         tableView.separatorStyle = .none
-        navigationController?.navigationBar.prefersLargeTitles = true
-        let leftBarButton = UIBarButtonItem(title: "Move to today", style: .plain, target: self, action: #selector(tappedLeftBarButton))
-//        let rightBarButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(tappedRightBarButton))
-        navigationItem.leftBarButtonItem = leftBarButton
-//        navigationItem.rightBarButtonItem = rightBarButton
+
+        
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+        refresh.addTarget(self, action: #selector(tappedLeftBarButton), for: .valueChanged)
+        refresh.attributedTitle = NSAttributedString(string: "Move to today", attributes: nil)
     }
+    
+    
     
     // MARK:- TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = HeaderView(reuseIdentifier: headerId)
@@ -145,11 +163,11 @@ class TodoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TodoTableViewCell
         cell.todoTextField.delegate = self
         cell.cancelButton.addTarget(self, action: #selector(tappedCancelButton), for: .touchUpInside)
-
+        
         var isDone = false
         if addTodo == true {
             cell.todoTextField.text = todoList.last?.todo
-
+            
             DispatchQueue.main.async {
                 cell.todoTextField.becomeFirstResponder()
                 tableView.scrollToRow(at: indexPath, at: .top, animated: true)
@@ -250,7 +268,7 @@ class TodoTableViewController: UITableViewController {
                     count += 1
                 }
             }
-        
+            
             // update view
             tableView.deleteRows(at: [indexPath], with: .left)
             
@@ -263,7 +281,6 @@ class TodoTableViewController: UITableViewController {
         let kkk = UISwipeActionsConfiguration(actions: [kk])
         return kkk
     }
-    
 }
 
 
@@ -306,7 +323,7 @@ extension TodoTableViewController {
         transition.fillMode = CAMediaTimingFillMode.forwards
         transition.duration = 0.4
         transition.subtype = CATransitionSubtype.fromLeft
-        tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
+        refresh.endRefreshing()
     }
 }
 

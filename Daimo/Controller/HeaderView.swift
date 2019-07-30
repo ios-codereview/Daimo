@@ -20,8 +20,8 @@ class HeaderView: UITableViewHeaderFooterView {
     
     let dateTypeLabel: UILabel = {
         let label = UILabel()
-//        label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.font = UIFont(name: "Menlo", size: 16)
+        label.font = UIFont.date
+        label.textColor = .greyishBrown
         return label
     }()
     
@@ -46,7 +46,7 @@ class HeaderView: UITableViewHeaderFooterView {
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .clear
+        contentView.backgroundColor = .white
         contentView.addSubview(dateTypeLabel)
         contentView.addSubview(dateCV)
         dateTypeLabel.snp.makeConstraints {
@@ -153,7 +153,7 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
             date = Calendar.current.date(byAdding: .day, value: indexPath.row, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate(("EEEE, MMMMd, yyyy"))
             dateToString = dateFormatter.string(from: date)
-            cell.bgView.backgroundColor = UIColor(red:0.99, green:0.62, blue:0.60, alpha:1.0)
+            cell.bgView.backgroundColor = .peach
         case 1?:
             date = Calendar.current.date(byAdding: .day, value: indexPath.row * 7, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate(("EE, MMMd"))
@@ -161,18 +161,18 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
             date = Calendar.current.date(byAdding: .day, value: indexPath.row * 7 + 6, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate("EE, MMMd, yyyy")
             dateToString = "\(dateToString) - \(dateFormatter.string(from: date))"
-            cell.bgView.backgroundColor = UIColor(red:0.98, green:0.80, blue:0.68, alpha:1.0)
+            cell.bgView.backgroundColor = .paleTeal
         case 2?:
             date = Calendar.current.date(byAdding: .month, value: indexPath.row, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate(("MMMM, yyyy"))
             dateToString = dateFormatter.string(from: date)
-            cell.bgView.backgroundColor = UIColor(red:0.78, green:0.78, blue:0.66, alpha:1.0)
+            cell.bgView.backgroundColor = .lightGreyBlue
             
         case 3?:
             date = Calendar.current.date(byAdding: .year, value: indexPath.row, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate(("yyyy"))
             dateToString = dateFormatter.string(from: date)
-            cell.bgView.backgroundColor = UIColor(red:0.67, green:0.81, blue:0.82, alpha:1.0)
+            cell.bgView.backgroundColor = .lavenderPink
             
         default:
             break
@@ -191,4 +191,37 @@ extension HeaderView {
     @objc func tappedAddButton() {
         delegate?.deliveryData(sectionOfTableView!, Singleton.shared.currentDate[sectionOfTableView!])
     }
+}
+
+
+extension UIColor {
+    
+    @nonobjc class var peach: UIColor {
+        return UIColor(red: 1.0, green: 194.0 / 255.0, blue: 125.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var paleTeal: UIColor {
+        return UIColor(red: 137.0 / 255.0, green: 201.0 / 255.0, blue: 203.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var lightGreyBlue: UIColor {
+        return UIColor(red: 146.0 / 255.0, green: 169.0 / 255.0, blue: 200.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var lavenderPink: UIColor {
+        return UIColor(red: 202.0 / 255.0, green: 155.0 / 255.0, blue: 203.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var greyishBrown: UIColor {
+        return UIColor(white: 89.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var veryLightPink: UIColor {
+        return UIColor(white: 235.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var brownGrey: UIColor {
+        return UIColor(white: 163.0 / 255.0, alpha: 1.0)
+    }
+    
 }

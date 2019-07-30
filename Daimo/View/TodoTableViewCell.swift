@@ -8,18 +8,6 @@
 
 import UIKit
 
-class EmojiTextField: UITextField {
-    
-    override var textInputMode: UITextInputMode? {
-        for mode in UITextInputMode.activeInputModes {
-            if mode.primaryLanguage == "emoji" {
-                return mode
-            }
-        }
-        return nil
-    }
-}
-
 class TodoTableViewCell: UITableViewCell {
     
     
@@ -27,7 +15,7 @@ class TodoTableViewCell: UITableViewCell {
     
     let bgView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.90, alpha: 1.0)
+        view.backgroundColor = UIColor.veryLightPink
         view.layer.cornerRadius = 8
         return view
     }()
@@ -55,16 +43,18 @@ class TodoTableViewCell: UITableViewCell {
         textField.returnKeyType = .done
         textField.backgroundColor = .clear
         textField.borderStyle = .none
-        textField.font = UIFont.preferredFont(forTextStyle: .callout)
-        textField.keyboardAppearance = .dark
+        textField.font = UIFont.todo
+//        textField.keyboardAppearance = .dark
         return textField
     }()
+    
     lazy var accessory: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = UIColor(red:0.34, green:0.34, blue:0.34, alpha:1.0)
+        view.backgroundColor = UIColor.veryLightPink
         view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 38)
         return view
     }()
+    
     lazy var cancelButton: UIButton = {
         let button = UIButton(type: .custom)
         button.backgroundColor = UIColor(red:0.54, green:0.54, blue:0.54, alpha:1.0)
@@ -96,6 +86,9 @@ class TodoTableViewCell: UITableViewCell {
 // MARK:- SaetupUI
 extension TodoTableViewCell {
     func setupUI() {
+        self.backgroundColor = .white
+        
+        
         contentView.addSubview(bgView)
         bgView.addSubview(checkBoxButton)
         bgView.addSubview(todoTextField)

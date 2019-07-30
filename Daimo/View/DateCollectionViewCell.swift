@@ -13,24 +13,22 @@ class DateCollectionViewCell: UICollectionViewCell {
     let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-//        label.font = UIFont(name: "Menlo", size: 14)
-        label.textColor = .black
-//        label.shadowColor = UIColor(white: 0.95, alpha: 1.0)
-//        label.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        label.font = UIFont.date
+        label.textColor = .white
         return label
     }()
     let addButton: UIButton = {
         let button = UIButton(type: .contactAdd)
-        button.tintColor = .black
+        button.tintColor = .white
         return button
     }()
     let bgView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 12
-        view.layer.shadowColor = UIColor.darkGray.cgColor
-        view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        view.layer.shadowOpacity = 0.2
-        view.layer.shadowRadius = 4.0
+//        view.layer.shadowColor = UIColor.darkGray.cgColor
+//        view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+//        view.layer.shadowOpacity = 0.2
+//        view.layer.shadowRadius = 4.0
         return view
     }()
     
@@ -67,4 +65,20 @@ class DateCollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension UIFont {
+    
+    class var naviTitle: UIFont {
+        return UIFont(name: "Champagne&Limousines-Bold", size: 23.0)!
+    }
+    
+    class var date: UIFont {
+        return UIFont(name: "Champagne&Limousines-Bold", size: 16.0)!
+    }
+    
+    class var todo: UIFont {
+        return UIFont(name: "HaanYGodic23", size: 12.0)!
+    }
+    
 }

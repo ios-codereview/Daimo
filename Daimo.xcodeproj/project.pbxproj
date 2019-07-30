@@ -8,28 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4E6452CD2F706B95153377A7 /* Pods_Daimo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */; };
+		BF3A5DB022F02BE900295540 /* Champagne & Limousines Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */; };
+		BF3A5DB222F02EB900295540 /* HANYGO230.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A5DB122F02EB600295540 /* HANYGO230.ttf */; };
 		BF7C133322D9CCAE00EBB84E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */; };
-		BF7C133822D9CCAE00EBB84E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7C133622D9CCAE00EBB84E /* Main.storyboard */; };
 		BF7C133B22D9CCAE00EBB84E /* Daimo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF7C133922D9CCAE00EBB84E /* Daimo.xcdatamodeld */; };
 		BF7C133D22D9CCAF00EBB84E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7C133C22D9CCAF00EBB84E /* Assets.xcassets */; };
-		BF7C134022D9CCAF00EBB84E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7C133E22D9CCAF00EBB84E /* LaunchScreen.storyboard */; };
 		BF7C135A22DA2CF800EBB84E /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C135922DA2CF800EBB84E /* TodoTableViewController.swift */; };
 		BF7C136822DB19F700EBB84E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136722DB19F700EBB84E /* HeaderView.swift */; };
 		BF7C136A22DB1C3500EBB84E /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136922DB1C3500EBB84E /* DateCollectionViewCell.swift */; };
 		BF7C136C22DB1F3E00EBB84E /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136B22DB1F3E00EBB84E /* TodoTableViewCell.swift */; };
 		BF7C136E22DBA1C500EBB84E /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136D22DBA1C500EBB84E /* Singleton.swift */; };
 		BF7C137022DC4CBC00EBB84E /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C136F22DC4CBC00EBB84E /* TodoList.swift */; };
+		BFDABD3322F0B46D00C3F1FE /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDABD3222F0B46D00C3F1FE /* Splash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63D0CFA3DEB903AC40184F12 /* Pods-Daimo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daimo.release.xcconfig"; path = "Target Support Files/Pods-Daimo/Pods-Daimo.release.xcconfig"; sourceTree = "<group>"; };
 		AF5FC093E89E442E2DF241B1 /* Pods-Daimo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daimo.debug.xcconfig"; path = "Target Support Files/Pods-Daimo/Pods-Daimo.debug.xcconfig"; sourceTree = "<group>"; };
+		BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines Bold.ttf"; sourceTree = "<group>"; };
+		BF3A5DB122F02EB600295540 /* HANYGO230.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HANYGO230.ttf; sourceTree = "<group>"; };
 		BF7C132F22D9CCAE00EBB84E /* Daimo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daimo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF7C133722D9CCAE00EBB84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF7C133A22D9CCAE00EBB84E /* Daimo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Daimo.xcdatamodel; sourceTree = "<group>"; };
 		BF7C133C22D9CCAF00EBB84E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF7C133F22D9CCAF00EBB84E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7C134122D9CCAF00EBB84E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7C135922DA2CF800EBB84E /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		BF7C136722DB19F700EBB84E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		BF7C136B22DB1F3E00EBB84E /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
 		BF7C136D22DBA1C500EBB84E /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		BF7C136F22DC4CBC00EBB84E /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		BFDABD3222F0B46D00C3F1FE /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daimo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,11 +88,12 @@
 				BF7C134922D9CFAF00EBB84E /* Model */,
 				BF7C134822D9CFA400EBB84E /* View */,
 				BF7C134722D9CF9B00EBB84E /* Controller */,
-				BF7C133622D9CCAE00EBB84E /* Main.storyboard */,
 				BF7C133C22D9CCAF00EBB84E /* Assets.xcassets */,
-				BF7C133E22D9CCAF00EBB84E /* LaunchScreen.storyboard */,
+				BFDABD3222F0B46D00C3F1FE /* Splash.storyboard */,
 				BF7C134122D9CCAF00EBB84E /* Info.plist */,
 				BF7C133922D9CCAE00EBB84E /* Daimo.xcdatamodeld */,
+				BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */,
+				BF3A5DB122F02EB600295540 /* HANYGO230.ttf */,
 			);
 			path = Daimo;
 			sourceTree = "<group>";
@@ -190,9 +193,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF7C134022D9CCAF00EBB84E /* LaunchScreen.storyboard in Resources */,
 				BF7C133D22D9CCAF00EBB84E /* Assets.xcassets in Resources */,
-				BF7C133822D9CCAE00EBB84E /* Main.storyboard in Resources */,
+				BF3A5DB222F02EB900295540 /* HANYGO230.ttf in Resources */,
+				BF3A5DB022F02BE900295540 /* Champagne & Limousines Bold.ttf in Resources */,
+				BFDABD3322F0B46D00C3F1FE /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,25 +261,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BF7C133622D9CCAE00EBB84E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF7C133722D9CCAE00EBB84E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BF7C133E22D9CCAF00EBB84E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF7C133F22D9CCAF00EBB84E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BF7C134222D9CCAF00EBB84E /* Debug */ = {

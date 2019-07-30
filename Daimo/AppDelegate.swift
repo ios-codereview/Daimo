@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: TodoTableViewController())
 //        window?.rootViewController = TodoTableViewController()
         window?.makeKeyAndVisible()
+        sleep(1)
         return true
     }
 
