@@ -174,17 +174,18 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.deliveryData(sectionOfTableView!, Singleton.shared.currentDate[sectionOfTableView!])
         
         //animation
-        UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
-            collectionView.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
-
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+            collectionView.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+            
         }) { (success) in
-            UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
                 collectionView.transform = .identity
             }, completion: nil)
         }
+        
+        delegate?.deliveryData(sectionOfTableView!, Singleton.shared.currentDate[sectionOfTableView!])
     }
 }
 
