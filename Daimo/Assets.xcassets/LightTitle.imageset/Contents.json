@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "daimo.png",
+      "filename" : "LightTitle.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "daimo@2x.png",
+      "filename" : "LightTitle@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "daimo@3x.png",
+      "filename" : "LightTitle@3x.png",
       "scale" : "3x"
     }
   ],

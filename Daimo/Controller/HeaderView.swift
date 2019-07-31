@@ -80,20 +80,20 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
         
         switch sectionOfTableView {
         case 0?:
-            date = Calendar.current.date(byAdding: .day, value: index + 1, to: startDate)!
+            date = Calendar.current.date(byAdding: .day, value: index, to: startDate)!
         case 1?:
             switch Calendar.current.dateComponents([.weekday], from: startDate).weekday! {
-            case 1: date = Calendar.current.date(byAdding: .day, value: index * 7 - 6 + 1, to: startDate)!
-            case 2: date = Calendar.current.date(byAdding: .day, value: index * 7 - 0 + 1, to: startDate)!
-            case 3: date = Calendar.current.date(byAdding: .day, value: index * 7 - 1 + 1, to: startDate)!
-            case 4: date = Calendar.current.date(byAdding: .day, value: index * 7 - 2 + 1, to: startDate)!
-            case 5: date = Calendar.current.date(byAdding: .day, value: index * 7 - 3 + 1, to: startDate)!
-            case 6: date = Calendar.current.date(byAdding: .day, value: index * 7 - 4 + 1, to: startDate)!
-            case 7: date = Calendar.current.date(byAdding: .day, value: index * 7 - 5 + 1, to: startDate)!
+            case 1: date = Calendar.current.date(byAdding: .day, value: index * 7 - 6, to: startDate)!
+            case 2: date = Calendar.current.date(byAdding: .day, value: index * 7 - 0, to: startDate)!
+            case 3: date = Calendar.current.date(byAdding: .day, value: index * 7 - 1, to: startDate)!
+            case 4: date = Calendar.current.date(byAdding: .day, value: index * 7 - 2, to: startDate)!
+            case 5: date = Calendar.current.date(byAdding: .day, value: index * 7 - 3, to: startDate)!
+            case 6: date = Calendar.current.date(byAdding: .day, value: index * 7 - 4, to: startDate)!
+            case 7: date = Calendar.current.date(byAdding: .day, value: index * 7 - 5, to: startDate)!
             default: break
             }
         case 2?:
-            date = Calendar.current.date(byAdding: .month, value: index-1, to: startDate)!
+            date = Calendar.current.date(byAdding: .month, value: index, to: startDate)!
         case 3?:
             date = Calendar.current.date(byAdding: .year, value: index, to: startDate)!
         default:
@@ -115,9 +115,9 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
         case 1?: numberOfItem = 520
             indexToToday[1] = Int(Calendar.current.dateComponents([.day], from: startDate, to: todayDate).day! / 7)
         case 2?: numberOfItem = 120
-            indexToToday[2] = Calendar.current.dateComponents([.month], from: startDate, to: todayDate).month! + 1
+            indexToToday[2] = Calendar.current.dateComponents([.month], from: startDate, to: todayDate).month!
         case 3?: numberOfItem = 10
-            indexToToday[3] = Calendar.current.dateComponents([.year], from: startDate, to: todayDate).year! + 1
+            indexToToday[3] = Calendar.current.dateComponents([.year], from: startDate, to: todayDate).year!
         default: break
         }
         DispatchQueue.main.async {
@@ -129,14 +129,6 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
                 collectionView.setContentOffset(Singleton.shared.currentPoint[self.sectionOfTableView!], animated: false)
             }
         }
-        
-//        if Singleton.shared.firstLoadOfSectionHeader[sectionOfTableView!] == false {
-//            Singleton.shared.firstLoadOfSectionHeader[sectionOfTableView!] = true
-//            collectionView.setContentOffset(CGPoint(x: deviceWidth * CGFloat(indexToToday[sectionOfTableView!]), y: 0), animated: true)
-//            Singleton.shared.currentPoint[sectionOfTableView!] = collectionView.contentOffset
-//        } else {
-//            collectionView.setContentOffset(Singleton.shared.currentPoint[sectionOfTableView!], animated: true)
-//        }
         
         return numberOfItem
     }
@@ -162,7 +154,7 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
             dateToString = "\(dateToString) - \(dateFormatter.string(from: date))"
             cell.bgView.backgroundColor = .paleTeal
         case 2?:
-            date = Calendar.current.date(byAdding: .month, value: indexPath.row - 1, to: startDate)!
+            date = Calendar.current.date(byAdding: .month, value: indexPath.row, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate(("MMMM, yyyy"))
             dateToString = dateFormatter.string(from: date)
             cell.bgView.backgroundColor = .lightGreyBlue
@@ -178,18 +170,29 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
         }
         
         cell.dateLabel.text = dateToString
-        cell.addButton.addTarget(self, action: #selector(tappedAddButton), for: .touchUpInside)
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.deliveryData(sectionOfTableView!, Singleton.shared.currentDate[sectionOfTableView!])
+        
+        //animation
+        UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
+            collectionView.transform = CGAffineTransform(scaleX: 0.975, y: 0.975)
+
+        }) { (success) in
+            UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
+                collectionView.transform = .identity
+            }, completion: nil)
+        }
+    }
 }
+
+
+
 
 // MARK:- Event & Action
 extension HeaderView {
-    @objc func tappedAddButton() {
-        delegate?.deliveryData(sectionOfTableView!, Singleton.shared.currentDate[sectionOfTableView!])
-    }
 }
 
 

@@ -280,6 +280,7 @@ class TodoTableViewController: UITableViewController {
         let kkk = UISwipeActionsConfiguration(actions: [kk])
         return kkk
     }
+    
 }
 
 
@@ -347,15 +348,16 @@ extension TodoTableViewController {
         }
         
         index = Calendar.current.dateComponents([.month], from: startDate, to: todayDate).month!
-        monthlyDate = Calendar.current.date(byAdding: .month, value: index+1, to: startDate)!
+        monthlyDate = Calendar.current.date(byAdding: .month, value: index, to: startDate)!
         
         index = Calendar.current.dateComponents([.year], from: startDate, to: todayDate).year!
-        yearlyDate = Calendar.current.date(byAdding: .year, value: index+1, to: startDate)!
+        yearlyDate = Calendar.current.date(byAdding: .year, value: index, to: startDate)!
         
         Singleton.shared.currentDate[0] = todayDate
         Singleton.shared.currentDate[1] = weeklyDate
         Singleton.shared.currentDate[2] = monthlyDate
         Singleton.shared.currentDate[3] = yearlyDate
+        
     }
 }
 
@@ -440,8 +442,6 @@ protocol DeliveryDataProtocol: class {
 }
 extension TodoTableViewController: DeliveryDataProtocol {
     func deliveryData(_ dateType: Int, _ date: Date) {
-        print(dateType)
-        print(date)
         todoList.append(TodoList(dateType: dateType, date: date, isDone: false, todo: ""))
         addTodo = true
         tableView.insertRows(at: [IndexPath(row: 0, section: todoList.last!.dateType)], with: .left)

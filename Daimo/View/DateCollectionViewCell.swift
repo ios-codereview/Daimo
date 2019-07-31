@@ -17,18 +17,10 @@ class DateCollectionViewCell: UICollectionViewCell {
         label.textColor = .white
         return label
     }()
-    let addButton: UIButton = {
-        let button = UIButton(type: .contactAdd)
-        button.tintColor = .white
-        return button
-    }()
+
     let bgView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 12
-//        view.layer.shadowColor = UIColor.darkGray.cgColor
-//        view.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-//        view.layer.shadowOpacity = 0.2
-//        view.layer.shadowRadius = 4.0
         return view
     }()
     
@@ -37,7 +29,6 @@ class DateCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .clear
         contentView.addSubview(bgView)
         bgView.addSubview(dateLabel)
-        bgView.addSubview(addButton)
         
         bgView.snp.makeConstraints {
             $0.top.leading.equalToSuperview().offset(12)
@@ -49,11 +40,6 @@ class DateCollectionViewCell: UICollectionViewCell {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().offset(12)
         }
-        addButton.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().offset(-12)
-        }
-        
         
     }
     
