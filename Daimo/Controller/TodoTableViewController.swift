@@ -56,7 +56,6 @@ class TodoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
         setCurrentDateToToday()
         /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -441,6 +440,8 @@ protocol DeliveryDataProtocol: class {
 }
 extension TodoTableViewController: DeliveryDataProtocol {
     func deliveryData(_ dateType: Int, _ date: Date) {
+        print(dateType)
+        print(date)
         todoList.append(TodoList(dateType: dateType, date: date, isDone: false, todo: ""))
         addTodo = true
         tableView.insertRows(at: [IndexPath(row: 0, section: todoList.last!.dateType)], with: .left)

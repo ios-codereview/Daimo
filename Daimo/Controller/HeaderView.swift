@@ -80,26 +80,25 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
         
         switch sectionOfTableView {
         case 0?:
-            date = Calendar.current.date(byAdding: .day, value: index, to: startDate)!
+            date = Calendar.current.date(byAdding: .day, value: index + 1, to: startDate)!
         case 1?:
             switch Calendar.current.dateComponents([.weekday], from: startDate).weekday! {
-            case 1: date = Calendar.current.date(byAdding: .day, value: index * 7 - 6, to: startDate)!
-            case 2: date = Calendar.current.date(byAdding: .day, value: index * 7 - 0, to: startDate)!
-            case 3: date = Calendar.current.date(byAdding: .day, value: index * 7 - 1, to: startDate)!
-            case 4: date = Calendar.current.date(byAdding: .day, value: index * 7 - 2, to: startDate)!
-            case 5: date = Calendar.current.date(byAdding: .day, value: index * 7 - 3, to: startDate)!
-            case 6: date = Calendar.current.date(byAdding: .day, value: index * 7 - 4, to: startDate)!
-            case 7: date = Calendar.current.date(byAdding: .day, value: index * 7 - 5, to: startDate)!
+            case 1: date = Calendar.current.date(byAdding: .day, value: index * 7 - 6 + 1, to: startDate)!
+            case 2: date = Calendar.current.date(byAdding: .day, value: index * 7 - 0 + 1, to: startDate)!
+            case 3: date = Calendar.current.date(byAdding: .day, value: index * 7 - 1 + 1, to: startDate)!
+            case 4: date = Calendar.current.date(byAdding: .day, value: index * 7 - 2 + 1, to: startDate)!
+            case 5: date = Calendar.current.date(byAdding: .day, value: index * 7 - 3 + 1, to: startDate)!
+            case 6: date = Calendar.current.date(byAdding: .day, value: index * 7 - 4 + 1, to: startDate)!
+            case 7: date = Calendar.current.date(byAdding: .day, value: index * 7 - 5 + 1, to: startDate)!
             default: break
             }
         case 2?:
-            date = Calendar.current.date(byAdding: .month, value: index, to: startDate)!
+            date = Calendar.current.date(byAdding: .month, value: index-1, to: startDate)!
         case 3?:
             date = Calendar.current.date(byAdding: .year, value: index, to: startDate)!
         default:
             break
         }
-        
         Singleton.shared.currentPoint[sectionOfTableView!] = scrollView.contentOffset
         Singleton.shared.currentDate[sectionOfTableView!] = date
         delegate?.swipeSignal(sectionOfTableView!)
@@ -163,7 +162,7 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
             dateToString = "\(dateToString) - \(dateFormatter.string(from: date))"
             cell.bgView.backgroundColor = .paleTeal
         case 2?:
-            date = Calendar.current.date(byAdding: .month, value: indexPath.row, to: startDate)!
+            date = Calendar.current.date(byAdding: .month, value: indexPath.row - 1, to: startDate)!
             dateFormatter.setLocalizedDateFormatFromTemplate(("MMMM, yyyy"))
             dateToString = dateFormatter.string(from: date)
             cell.bgView.backgroundColor = .lightGreyBlue

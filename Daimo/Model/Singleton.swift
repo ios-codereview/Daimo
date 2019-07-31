@@ -17,7 +17,7 @@ class Singleton {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         var date = Date()
-        date = dateFormatter.date(from: "2018-12-31")!
+        date = dateFormatter.date(from: "2018-12-03")!
         return date
     }()
     
