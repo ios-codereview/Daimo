@@ -82,7 +82,7 @@ class SplashViewController: UIViewController {
 
         
         
-            UIView.transition(with: self.lightTitle, duration: 1.1, options: .transitionCrossDissolve, animations: {
+            UIView.transition(with: self.lightTitle, duration: 0.75, options: .transitionCrossDissolve, animations: {
                 self.lightTitle.image = UIImage.init(named: "DarkTitle")
             }, completion: { (done) in
                 let mainVC = UINavigationController(rootViewController: TodoTableViewController())

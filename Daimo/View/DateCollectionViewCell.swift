@@ -12,7 +12,6 @@ class DateCollectionViewCell: UICollectionViewCell {
     
     let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
         label.font = UIFont.date
         label.textColor = .white
         return label

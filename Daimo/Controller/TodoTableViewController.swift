@@ -203,16 +203,18 @@ class TodoTableViewController: UITableViewController {
             cell.todoTextField.textColor = .darkGray
             cell.checkBoxButton.tintColor = .darkGray
         }
+
+        cell.checkBoxButton.isSelected = !cell.checkBoxButton.isSelected
         
-        // button animation
-        UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
-            cell.checkBoxButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            cell.checkBoxButton.isSelected = !cell.checkBoxButton.isSelected
-        }) { (success) in
-            UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
-                cell.checkBoxButton.transform = .identity
-            }, completion: nil)
-        }
+//        // button animation
+//        UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
+//            cell.checkBoxButton.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+//            cell.checkBoxButton.isSelected = !cell.checkBoxButton.isSelected
+//        }) { (success) in
+//            UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
+//                cell.checkBoxButton.transform = .identity
+//            }, completion: nil)
+//        }
         
         return cell
     }
