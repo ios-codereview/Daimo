@@ -62,6 +62,8 @@ class TodoTableViewController: UITableViewController {
         
         
         retrieveData()
+
+        
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.sectionHeaderHeight = 164-26
         tableView.sectionFooterHeight = 0
@@ -277,7 +279,7 @@ class TodoTableViewController: UITableViewController {
             self.deleteData(listIndex)
             
         }
-        kk.backgroundColor = UIColor(red:1.00, green:0.39, blue:0.39, alpha:1.0)
+        kk.backgroundColor = UIColor(red:0.95, green:0.49, blue:0.49, alpha:1.0)
         
         let kkk = UISwipeActionsConfiguration(actions: [kk])
         return kkk
