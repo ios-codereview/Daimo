@@ -15,6 +15,8 @@ class SplashViewController: UIViewController {
     let deviceHeight = UIScreen.main.bounds.size.height
     
     let lightTitle: UIImageView = {
+        // Review: [Refactoring] Device 크기가 아니라 부모의 frame을 기준으로 하는 건 어떤지요?
+        // lightTitle.frame = CGRect(x: self.view.bounds.width/2-36, y: self.view.bounds.height/2-10, width: 75, height: 20)
         let deviceWidth = UIScreen.main.bounds.size.width
         let deviceHeight = UIScreen.main.bounds.size.height
         let view = UIImageView()

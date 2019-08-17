@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E6452CD2F706B95153377A7 /* Pods_Daimo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */; };
+		BDCB0D3723077DF100E55F34 /* DaimoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB0D3623077DF100E55F34 /* DaimoTests.swift */; };
 		BF3A5DB022F02BE900295540 /* Champagne & Limousines Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */; };
 		BF3A5DB222F02EB900295540 /* HANYGO230.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A5DB122F02EB600295540 /* HANYGO230.ttf */; };
 		BF7C133322D9CCAE00EBB84E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */; };
@@ -24,9 +25,22 @@
 		BFDABD6222F1B80100C3F1FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDABD6122F1B80100C3F1FE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BDCB0D3923077DF100E55F34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF7C132722D9CCAE00EBB84E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF7C132E22D9CCAE00EBB84E;
+			remoteInfo = Daimo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		63D0CFA3DEB903AC40184F12 /* Pods-Daimo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daimo.release.xcconfig"; path = "Target Support Files/Pods-Daimo/Pods-Daimo.release.xcconfig"; sourceTree = "<group>"; };
 		AF5FC093E89E442E2DF241B1 /* Pods-Daimo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daimo.debug.xcconfig"; path = "Target Support Files/Pods-Daimo/Pods-Daimo.debug.xcconfig"; sourceTree = "<group>"; };
+		BDCB0D3423077DF000E55F34 /* DaimoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaimoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCB0D3623077DF100E55F34 /* DaimoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaimoTests.swift; sourceTree = "<group>"; };
+		BDCB0D3823077DF100E55F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines Bold.ttf"; sourceTree = "<group>"; };
 		BF3A5DB122F02EB600295540 /* HANYGO230.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HANYGO230.ttf; sourceTree = "<group>"; };
 		BF7C132F22D9CCAE00EBB84E /* Daimo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daimo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +61,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BDCB0D3123077DF000E55F34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7C132C22D9CCAE00EBB84E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDCB0D3523077DF100E55F34 /* DaimoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDCB0D3623077DF100E55F34 /* DaimoTests.swift */,
+				BDCB0D3823077DF100E55F34 /* Info.plist */,
+			);
+			path = DaimoTests;
+			sourceTree = "<group>";
+		};
 		BE9120D9E0E9C86F9E6969BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7C133122D9CCAE00EBB84E /* Daimo */,
+				BDCB0D3523077DF100E55F34 /* DaimoTests */,
 				BF7C133022D9CCAE00EBB84E /* Products */,
 				BE9120D9E0E9C86F9E6969BE /* Pods */,
 				CEABC570D98CE93426A17E48 /* Frameworks */,
@@ -81,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7C132F22D9CCAE00EBB84E /* Daimo.app */,
+				BDCB0D3423077DF000E55F34 /* DaimoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +174,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BDCB0D3323077DF000E55F34 /* DaimoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDCB0D3D23077DF100E55F34 /* Build configuration list for PBXNativeTarget "DaimoTests" */;
+			buildPhases = (
+				BDCB0D3023077DF000E55F34 /* Sources */,
+				BDCB0D3123077DF000E55F34 /* Frameworks */,
+				BDCB0D3223077DF000E55F34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDCB0D3A23077DF100E55F34 /* PBXTargetDependency */,
+			);
+			name = DaimoTests;
+			productName = DaimoTests;
+			productReference = BDCB0D3423077DF000E55F34 /* DaimoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BF7C132E22D9CCAE00EBB84E /* Daimo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF7C134422D9CCAF00EBB84E /* Build configuration list for PBXNativeTarget "Daimo" */;
@@ -151,6 +201,7 @@
 				BF7C132C22D9CCAE00EBB84E /* Frameworks */,
 				BF7C132D22D9CCAE00EBB84E /* Resources */,
 				90FCC1A070384DF45CA8D854 /* [CP] Embed Pods Frameworks */,
+				BDB081C223066D6600B63B43 /* Review */,
 			);
 			buildRules = (
 			);
@@ -167,10 +218,14 @@
 		BF7C132722D9CCAE00EBB84E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = sogih;
 				TargetAttributes = {
+					BDCB0D3323077DF000E55F34 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = BF7C132E22D9CCAE00EBB84E;
+					};
 					BF7C132E22D9CCAE00EBB84E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -190,11 +245,19 @@
 			projectRoot = "";
 			targets = (
 				BF7C132E22D9CCAE00EBB84E /* Daimo */,
+				BDCB0D3323077DF000E55F34 /* DaimoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BDCB0D3223077DF000E55F34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7C132D22D9CCAE00EBB84E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,9 +312,35 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Daimo/Pods-Daimo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BDB081C223066D6600B63B43 /* Review */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Review;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nTAGS=\"Review:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BDCB0D3023077DF000E55F34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCB0D3723077DF100E55F34 /* DaimoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF7C132B22D9CCAE00EBB84E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,7 +359,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BDCB0D3A23077DF100E55F34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF7C132E22D9CCAE00EBB84E /* Daimo */;
+			targetProxy = BDCB0D3923077DF100E55F34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BDCB0D3B23077DF100E55F34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 576T8HK6X4;
+				INFOPLIST_FILE = DaimoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onemoon.studio.randomImage.DaimoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daimo.app/Daimo";
+			};
+			name = Debug;
+		};
+		BDCB0D3C23077DF100E55F34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 576T8HK6X4;
+				INFOPLIST_FILE = DaimoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onemoon.studio.randomImage.DaimoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daimo.app/Daimo";
+			};
+			name = Release;
+		};
 		BF7C134222D9CCAF00EBB84E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -428,6 +567,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BDCB0D3D23077DF100E55F34 /* Build configuration list for PBXNativeTarget "DaimoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDCB0D3B23077DF100E55F34 /* Debug */,
+				BDCB0D3C23077DF100E55F34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF7C132A22D9CCAE00EBB84E /* Build configuration list for PBXProject "Daimo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

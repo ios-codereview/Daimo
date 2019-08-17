@@ -51,6 +51,9 @@ class TodoTableViewCell: UITableViewCell {
     lazy var accessory: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = UIColor.veryLightPink
+        // Review: [Refactoring] view의 절대적인 크기는 하위 뷰 크기에 영향을 미칩니다.
+        // cancelButton text 크기에 따라 view 크기가 결정되어야 할 필요가 있습니다.
+        // intrinsiccontentsize 적용하는 것은 어떤가요?
         view.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 38)
         return view
     }()
@@ -115,6 +118,8 @@ extension TodoTableViewCell {
         cancelButton.snp.makeConstraints {
             $0.top.equalToSuperview().offset(6)
             $0.bottom.equalToSuperview().offset(-6)
+            // Review: [Refactroing] $0.trailing.equalTo(-4) 조금 더 명시적으로 나타내는 것이 어떤가요?
+            // $0.trailing.equalToSuperview().offset(-4) 이런식으로 쓰는 것은 어떤가요?
             $0.trailing.equalTo(-4)
             $0.width.equalTo(92)
         }
