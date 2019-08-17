@@ -69,6 +69,8 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        // Review: [Refactroing] View 단위보다 Layer 단위로 애니메이션 하는 건 어떨까요?
+        // https://medium.com/@joncardasis/better-ios-animations-with-catransaction-72a7425673a6
         view.addSubview(lightTitle)
         view.addSubview(leading)
         view.addSubview(bottom)
@@ -87,6 +89,7 @@ class SplashViewController: UIViewController {
             UIView.transition(with: self.lightTitle, duration: 0.75, options: .transitionCrossDissolve, animations: {
                 self.lightTitle.image = UIImage.init(named: "DarkTitle")
             }, completion: { (done) in
+                //
                 let mainVC = UINavigationController(rootViewController: TodoTableViewController())
                 self.present(mainVC, animated: true, completion: nil)
             })

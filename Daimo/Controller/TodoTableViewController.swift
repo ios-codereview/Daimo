@@ -79,7 +79,7 @@ class TodoTableViewController: UITableViewController {
             NSAttributedString.Key.foregroundColor: UIColor.greyishBrown,
             NSAttributedString.Key.font: UIFont.naviTitle
         ]
-        // Review: viewWillAppear 에서 하는건 어떤가요?
+        // Review: [사용성] viewWillAppear 에서 하는건 어떤가요?
         // navigationController 는 child viewcontroller에서 공유하기 때문에
         // 다른 Child ViewController 에서도 네비바 경계선이 설정될 수 있습니다.
         navigationController?.navigationBar.isTranslucent = false
