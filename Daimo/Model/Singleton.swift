@@ -40,7 +40,7 @@ class Singleton {
         return date
     }()
 
-    // Review: [Refactoring] 저는 todayDate 를 Date extension 에서 제공하는 것을 선호합니다.
+    // Review: [Refactoring] todayDate 를 Date extension 에서 제공하는 것은 어떤가요?
     /*
      extension Date {
         var todayDate: Date {

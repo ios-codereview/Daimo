@@ -69,17 +69,28 @@ class TodoTableViewController: UITableViewController {
         tableView.sectionFooterHeight = 0
         tableView.register(TodoTableViewCell.self, forCellReuseIdentifier: cellId)
         navigationItem.title = "DAIMO"
+        // Review: [Refactoring] 미리 스타일을 지정하는 건 어떤가요?
+        /*UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.greyishBrown,
+            NSAttributedString.Key.font: UIFont.naviTitle
+        ]
+         */
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.greyishBrown,
             NSAttributedString.Key.font: UIFont.naviTitle
         ]
+        // Review: viewWillAppear 에서 하는건 어떤가요?
+        // navigationController 는 child viewcontroller에서 공유하기 때문에
+        // 다른 Child ViewController 에서도 네비바 경계선이 설정될 수 있습니다.
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = .white
         view.backgroundColor = .white
         //네비바 경계선
+        
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.backgroundColor = .clear
+        // ==== viewWillAppear 에서 하는건 어떤가요? 여기까지 ===
         
         tableView.separatorStyle = .none
 
@@ -92,8 +103,6 @@ class TodoTableViewController: UITableViewController {
         refresh.addTarget(self, action: #selector(tappedLeftBarButton), for: .valueChanged)
         refresh.attributedTitle = NSAttributedString(string: "Move to today", attributes: nil)
     }
-    
-    
     
     // MARK:- TableView
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -384,7 +393,15 @@ extension TodoTableViewController {
     
     
     func createData(_ dateType: Int, _ date: Date, _ isDone: Bool, _ todo: String) {
-        
+        // Review: [Refactoring] Data protocol을 설계하는건 어떤가요?
+        /*
+        protocol DataAcessProtocol {
+            associatedtype T
+            func insert(t: T)
+            func delete(t: T)
+            func update(t: T)
+        }
+         */
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         let userEntity = NSEntityDescription.entity(forEntityName: "TodoData", in: managedContext)!

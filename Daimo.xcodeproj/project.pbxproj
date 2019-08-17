@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4E6452CD2F706B95153377A7 /* Pods_Daimo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F557BA13BC76F15D9998D0 /* Pods_Daimo.framework */; };
 		BDCB0D3723077DF100E55F34 /* DaimoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB0D3623077DF100E55F34 /* DaimoTests.swift */; };
+		BDCB0D432307940700E55F34 /* DateFormatFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB0D422307940700E55F34 /* DateFormatFactory.swift */; };
+		BDCB0D462307976200E55F34 /* DateFormatFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB0D452307976200E55F34 /* DateFormatFactoryTest.swift */; };
+		BDCB0D482307988700E55F34 /* Date+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB0D472307988700E55F34 /* Date+Day.swift */; };
 		BF3A5DB022F02BE900295540 /* Champagne & Limousines Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */; };
 		BF3A5DB222F02EB900295540 /* HANYGO230.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF3A5DB122F02EB600295540 /* HANYGO230.ttf */; };
 		BF7C133322D9CCAE00EBB84E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C133222D9CCAE00EBB84E /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 		BDCB0D3423077DF000E55F34 /* DaimoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaimoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCB0D3623077DF100E55F34 /* DaimoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaimoTests.swift; sourceTree = "<group>"; };
 		BDCB0D3823077DF100E55F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDCB0D422307940700E55F34 /* DateFormatFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatFactory.swift; sourceTree = "<group>"; };
+		BDCB0D452307976200E55F34 /* DateFormatFactoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatFactoryTest.swift; sourceTree = "<group>"; };
+		BDCB0D472307988700E55F34 /* Date+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Day.swift"; sourceTree = "<group>"; };
 		BF3A5DAF22F02BE600295540 /* Champagne & Limousines Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Champagne & Limousines Bold.ttf"; sourceTree = "<group>"; };
 		BF3A5DB122F02EB600295540 /* HANYGO230.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HANYGO230.ttf; sourceTree = "<group>"; };
 		BF7C132F22D9CCAE00EBB84E /* Daimo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daimo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,8 @@
 			children = (
 				BDCB0D3623077DF100E55F34 /* DaimoTests.swift */,
 				BDCB0D3823077DF100E55F34 /* Info.plist */,
+				BDCB0D452307976200E55F34 /* DateFormatFactoryTest.swift */,
+				BDCB0D472307988700E55F34 /* Date+Day.swift */,
 			);
 			path = DaimoTests;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 			children = (
 				BF7C135922DA2CF800EBB84E /* TodoTableViewController.swift */,
 				BF7C136722DB19F700EBB84E /* HeaderView.swift */,
+				BDCB0D422307940700E55F34 /* DateFormatFactory.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -337,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCB0D482307988700E55F34 /* Date+Day.swift in Sources */,
 				BDCB0D3723077DF100E55F34 /* DaimoTests.swift in Sources */,
+				BDCB0D462307976200E55F34 /* DateFormatFactoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +361,7 @@
 				BF7C135A22DA2CF800EBB84E /* TodoTableViewController.swift in Sources */,
 				BFDABD5A22F1B4AD00C3F1FE /* SplashViewController.swift in Sources */,
 				BF7C137022DC4CBC00EBB84E /* TodoList.swift in Sources */,
+				BDCB0D432307940700E55F34 /* DateFormatFactory.swift in Sources */,
 				BF7C133B22D9CCAE00EBB84E /* Daimo.xcdatamodeld in Sources */,
 				BF7C136C22DB1F3E00EBB84E /* TodoTableViewCell.swift in Sources */,
 				BF7C136822DB19F700EBB84E /* HeaderView.swift in Sources */,
