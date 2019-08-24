@@ -12,7 +12,6 @@ class DateFormatFactory {
     private static let dateFormatter = DateFormatter()
     
     static func setLocalizedDateFormatFromTemplate(_ date: Date, template: String) -> String {
-        dateFormatter.setLocalizedDateFormatFromTemplate(("EEEE, MMMMd, yyyy"))
         dateFormatter.setLocalizedDateFormatFromTemplate(template)
         return dateFormatter.string(from: date)
     }
